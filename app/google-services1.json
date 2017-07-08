@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "620589599324",
+    "firebase_url": "https://avsemap-fb3d7.firebaseio.com",
+    "project_id": "avsemap-fb3d7",
+    "storage_bucket": "avsemap-fb3d7.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:620589599324:android:041181b740caf0ff",
+        "android_client_info": {
+          "package_name": "com.example.manhngo.avsemap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "620589599324-umes510bqugtcaqg1pijv7qs7ibirbuj.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.manhngo.avsemap",
+            "certificate_hash": "450C6CE53DBA805D26786A2D60CEFE6C528876F6"
+          }
+        },
+        {
+          "client_id": "620589599324-jrfnu9r4nm6tp674d275i5sivtk08bm1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBSrVw_EJqZ4dgdaMUXu3lR0gDy4pXxip0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "620589599324-jrfnu9r4nm6tp674d275i5sivtk08bm1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

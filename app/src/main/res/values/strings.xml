@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">AvsEmap</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="map_not_ready">Mat not ready</string>
+
+    <string name="traffic">Traffic</string>
+    <string name="show_map">Show map</string>
+    <string name="my_location">My Location</string>
+    <string name="normal">Normal</string>
+    <string name="hybrid">Hybird</string>
+    <string name="satellite">Satellite</string>
+    <string name="terrain">Terrain</string>
+    <string name="none_map">None</string>
+    <string-array name="layers_array">
+        <item>@string/normal</item>
+        <item>@string/hybrid</item>
+        <item>@string/satellite</item>
+        <item>@string/terrain</item>
+        <item>@string/none_map</item>
+    </string-array>
+
+    <!--    Permissions    -->
+    <string name="permission_rationale_location">Access to the location service is required to demonstrate the \'my location\' feature, which shows your current location on the map.</string>
+    <string name="location_permission_denied">This sample requires location permission to enable the \'my location\' layer. Please try again and grant access to use the location.\nIf the permission has been permanently denied, it can be enabled from the System Settings &gt; Apps &gt; \'Google Maps API Demos\'.</string>
+    <string name="permission_required_toast">Location permission is required for this demo.</string>
+    <string name="title_activity_login">Sign in</string>
+
+    <!-- Strings related to activity_login1 -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+    <string name="register_error_message">Please make sure you enter first name, email and password!</string>
+    <string name="loading">Loading...</string>
+    <string name="auth_failed">Authentication failed</string>
+    <string name="auth_succeed">Login successful</string>
+    <string name="notSigned">You are not signed, Do you want to login?</string>
+    <string name="login">Login</string>
+    <string name="cancel">Cancel</string>
+    <string name="Signed">You are signed</string>
+    <string name="signout">Sign Out</string>
+    <string name="register">Register</string>
+    <string name="email">Email</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="backtomap">Back to Map</string>
+    <string name="back">Back</string>
+    <string name="stuck">Stuck</string>
+    <string name="accident">Accident</string>
+    <string name="police">Police</string>
+    <string name="flooding">Flooding</string>
+    <string name="construct">Construct</string>
+    <string name="title_activity_maps123">Map</string>
+    <string name="goi_y">What do you want to write?</string>
+</resources>

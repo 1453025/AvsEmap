@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+              android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_Stuck"
+        android:text="@string/stuck"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/stuck" />
+
+    <Button
+        android:id="@+id/btn_Accident"
+        android:text="@string/accident"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/accident" />
+
+
+    <Button
+        android:id="@+id/btn_Police"
+        android:text="@string/police"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/police" />
+
+    <Button
+        android:id="@+id/btn_Flooding"
+        android:text="@string/flooding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/flooding" />
+
+    <Button
+        android:id="@+id/btn_Construct"
+        android:text="@string/construct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@color/construct" />
+</LinearLayout>

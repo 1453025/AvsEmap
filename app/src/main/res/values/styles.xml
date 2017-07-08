@@ -1,0 +1,30 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="Theme.AppCompat.Light.NoActionBar.FullScreen" parent="@style/Theme.AppCompat.Light">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Theme.Transparent" parent="android:Theme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="Theme.AppCompat.CustomTheme">
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowCloseOnTouchOutside">true</item>
+        <item name="android:windowBackground">@color/primary_alpha</item>
+    </style>
+    <!-- Customize your theme here. -->
+
+</resources>

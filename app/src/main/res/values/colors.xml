@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#00bcd4</color>
+    <color name="colorPrimaryDark">#0097a7</color>
+    <color name="colorAccent">#2c3db9</color>
+
+    <color name="red_pressed">#DD4B39</color>
+    <color name="red_normal">#6bf12810</color>
+    <color name="police">#6b3c3ca1</color>
+    <color name="flooding">#6b076d76</color>
+    <color name="accident">#6bae1502</color>
+    <color name="construct">#704b4e1f</color>
+    <color name="stuck">#6be209ff</color>
+
+    <color name="green_pressed">#c8238484</color>
+    <color name="green_normal">#641f7874</color>
+
+    <color name="colorText">#FFFFFF</color>
+    <color name="secondary_text">#212121</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#B6B6B6</color>
+
+    <color name="bg_login">#26ae90</color>
+    <color name="bg_register">#2e3237</color>
+    <color name="bg_main">#428bca</color>
+    <color name="white">#ffffff</color>
+    <color name="input_login">#222222</color>
+    <color name="input_login_hint">#999999</color>
+    <color name="input_register">#888888</color>
+    <color name="input_register_bg">#3b4148</color>
+    <color name="input_register_hint">#5e6266</color>
+    <color name="btn_login">#26ae90</color>
+    <color name="btn_login_bg">#eceef1</color>
+    <color name="lbl_name">#333333</color>
+    <color name="btn_logut_bg">#ff6861</color>
+    <color name="bg_user_message">#ffffff</color>
+
+    <color name="primary_dark">#a11b7fa7</color>
+    <color name="primary_text">#211b1b</color>
+    <color name="primary">#b526769e</color>
+    <color name="primary_alpha">#94cacaca</color>
+    <color name="accent">#448AFF</color>
+    <color name="text_color">#FFFFFF</color>
+    <color name="text_color_hint">#a5ffffff</color>
+    <color name="text_color_icon">#212121</color>
+    <color name="Btn_Transes">#602a688c</color>
+
+
+</resources>
