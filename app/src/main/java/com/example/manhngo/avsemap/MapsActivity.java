@@ -26,6 +26,10 @@ import com.example.manhngo.avsemap.Interaction.RegisterActivity;
 import com.example.manhngo.avsemap.Modules_FindingDirection.DirectionFinder;
 import com.example.manhngo.avsemap.Modules_FindingDirection.DirectionFinderListener;
 import com.example.manhngo.avsemap.Modules_FindingDirection.Route;
+import com.google.android.gms.common.api.Status;
+import com.google.android.gms.location.places.Place;
+import com.google.android.gms.location.places.ui.PlaceAutocompleteFragment;
+import com.google.android.gms.location.places.ui.PlaceSelectionListener;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
@@ -44,8 +48,6 @@ import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-import com.quinny898.library.persistentsearch.SearchBox;
-import com.quinny898.library.persistentsearch.SearchResult;
 
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
@@ -59,10 +61,10 @@ public class MapsActivity extends AppCompatActivity
         implements OnMapReadyCallback, DirectionFinderListener,
         GoogleMap.OnMapLongClickListener,
         GoogleMap.OnMarkerClickListener,
-        View.OnClickListener, GoogleMap.OnCircleClickListener, ChildEventListener,
-        SearchBox.MenuListener, SearchBox.SearchListener {
+        View.OnClickListener, GoogleMap.OnCircleClickListener, ChildEventListener{
 
 
+    String TAG = "MapsActivity";
     private static final int REQUES_CODE_LOCATION = 10;
     private GoogleMap mMap;
     ControlMap controlMap;
@@ -77,7 +79,7 @@ public class MapsActivity extends AppCompatActivity
     private FloatingActionButton fabStuck;
     private FloatingActionButton fabMapType;
     private FloatingActionButton fabInformationUser;
-    private SearchBox search;
+
 
     OnCircle onCircle;
     LatLng findLatLng;
@@ -130,28 +132,20 @@ public class MapsActivity extends AppCompatActivity
 
         fabInformationUser.setOnClickListener(this);
 
-
-        search = (SearchBox) findViewById(R.id.searchbox);
-        // Obtain the SupportMapFragment and get notified when the map is ready to be used.
-
-        search.enableVoiceRecognition(this);
-//        for(int x = 0; x < 10; x++){
-//            SearchResult option = new SearchResult("Result " + Integer.toString(x), getResources()
-//                    .getDrawable(R.drawable.ic_history));
-//            search.addSearchable(option);
-//        }
-        search.setMenuListener(this);
-        search.setSearchListener(this);
-        search.setOverflowMenu(R.menu.overflow_menu);
-        search.setOverflowMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+        PlaceAutocompleteFragment autocompleteFragment = (PlaceAutocompleteFragment)
+                getFragmentManager().findFragmentById(R.id.place_autocomplete_fragment);
+        autocompleteFragment.setOnPlaceSelectedListener(new PlaceSelectionListener() {
             @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                switch (item.getItemId()) {
-                    case R.id.test_menu_item:
-                        Toast.makeText(MapsActivity.this, "Clicked!", Toast.LENGTH_SHORT).show();
-                        return true;
-                }
-                return false;
+            public void onPlaceSelected(Place place) {
+                // TODO: Get info about the selected place.
+                Log.i(TAG, "Place: " + place.getLatLng());
+                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(place.getLatLng(), 16));
+            }
+
+            @Override
+            public void onError(Status status) {
+                // TODO: Handle the error.
+                Log.i(TAG, "An error occurred: " + status);
             }
         });
 
@@ -389,24 +383,7 @@ public class MapsActivity extends AppCompatActivity
     }
 
 
-    @Override
-    public void onSearchOpened() {
-        //Use this to tint the screen
-    }
 
-    @Override
-    public void onSearchClosed() {
-        //Use this to un-tint the screen
-    }
-
-    @Override
-    public void onSearchTermChanged(String term) {
-        Log.d("MA-onSearchTermChanged", term + " Searched");
-        //React to the search term changing
-        //Called after it has updated results
-    }
-
-    @Override
     public void onSearch(String searchTerm) {
 
         Address address = convert.getAddressFromString(searchTerm, MapsActivity.this);
@@ -422,25 +399,6 @@ public class MapsActivity extends AppCompatActivity
         } catch (UnsupportedEncodingException e) {
             e.printStackTrace();
         }
-    }
-
-    @Override
-    public void onResultClick(SearchResult result) {
-        //React to a result being clicked
-        Log.d("MA-onResultClick", result + " Searched");
-    }
-
-    @Override
-    public void onSearchCleared() {
-        //Called when the clear button is clicked
-    }
-
-    @Override
-    public void onMenuClick() {
-        //Hamburger has been clicked
-        Toast.makeText(MapsActivity.this, "Menu click", Toast.LENGTH_LONG).show();
-        startActivity(new Intent(MapsActivity.this, LoginActivity.class));
-
     }
 
 
